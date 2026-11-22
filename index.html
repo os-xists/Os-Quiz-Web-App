@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="start" class="section">
+         <header>
+            <div>OS Quiz</div>
+            <div>Best Score: <span id="best-score"></span></div>
+        </header>
+        <div class="start-container">
+         <div class="start-grid">
+            <div>
+                <strong>Category</strong>
+            </div>
+            <div>
+                <select name="category" id="category">
+                    <option value="21">Sports</option>
+                    <option value="history">History</option>
+                    <option value="Politics">Politics</option>
+                </select>
+            </div>
+             <div>
+                <strong>Difficulty</strong>
+            </div>
+            <div>
+                <select name="difficulty" id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+             </div>
+            </div>
+           
+                <div id="loading" class="loading hidden">Loading...</div>
+                <div id="error" class="error hidden">An error occured. Please try again.</div>
+
+            <button id="start-quiz">Start Now!</button>
+        </div>
+    </section>
+    <section id="quiz" class="section hidden">
+        <header>
+            <div>OS Quiz</div>
+            <div id="timer">15</div>
+        </header>
+
+        <div id="quiz-container">
+            <div id="question-top">
+                <div id="progress"></div>
+                <div id="current-score">0</div>
+            </div>
+            <div id="the-quiz"></div>
+        </div>
+
+    </section>
+    <section id="result" class="section hidden">
+        <div id="result-container" class="text-center">
+            <div>Your score: <span id="result-score"></span></div>
+            <div id="percentage" class="text-center"></div>
+            <button id="play-again" onclick="location.reload();">Play Again</button>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
